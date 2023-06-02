@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-05-22T17:08:51.564Z",
+    "end": "2023-05-22T17:09:00.747Z",
+    "duration": 9183,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5f362540-04fd-41e4-90ee-d7045463c88f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\editor.cy.js",
+      "file": "cypress\\e2e\\editor.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1189e209-be82-4b07-9244-af0801c0daab",
+          "title": "articles",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should create an article",
+              "fullTitle": "articles should create an article",
+              "timedOut": null,
+              "duration": 9036,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept('POST', 'https://api.realworld.io/api/articles/').as('newArticle');\nconst article = {\n  title: 'Title',\n  description: 'Description',\n  body: 'Body',\n  tag: '#newarticle'\n};\ncy.deleteArticle(article);\ncy.get('a').contains(' New Article ').click();\ncy.get('[formcontrolname=\"title\"]').type(article.title);\ncy.get('[formcontrolname=\"description\"]').type(article.description);\ncy.get('[formcontrolname=\"body\"]').type(article.body);\ncy.get('[placeholder*=\"tags\"]').type(article.tag);\ncy.get('form').contains('Publish Article').click();\ncy.wait('@newArticle');\ncy.get('@newArticle').then(xhr => {\n  console.log(xhr);\n  expect(xhr.response.statusCode).to.equal(200);\n  expect(xhr.response.body.article.body).to.equal('Body');\n  expect(xhr.response.body.article.description).to.equal('Description');\n});",
+              "err": {},
+              "uuid": "f61783a1-df52-41c6-a8c5-facd04e1b0fb",
+              "parentUUID": "1189e209-be82-4b07-9244-af0801c0daab",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f61783a1-df52-41c6-a8c5-facd04e1b0fb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9036,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

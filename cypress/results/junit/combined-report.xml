@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="7" failures="0" time="14.413">
+  <testsuite name="Root Suite" timestamp="2023-05-22T17:09:32" tests="0" file="cypress\e2e\signup.cy.js" time="0" failures="0"/>
+  <testsuite name="register" timestamp="2023-05-22T17:09:32" tests="1" time="2.066" failures="0">
+    <testcase name="register should sign up an user" time="2.045" classname="should sign up an user"/>
+  </testsuite>
+  <testsuite name="articles" timestamp="2023-05-22T17:08:51" tests="1" time="9.156" failures="0">
+    <testcase name="articles should create an article" time="9.036" classname="should create an article"/>
+  </testsuite>
+  <testsuite name="feed" timestamp="2023-05-22T17:09:05" tests="2" time="14.413" failures="0">
+    <testcase name="feed should validate global feed likes count" time="2.442" classname="should validate global feed likes count"/>
+    <testcase name="feed should delete new article from global feed" time="4.666" classname="should delete new article from global feed"/>
+  </testsuite>
+  <testsuite name="tags" timestamp="2023-05-22T17:09:37" tests="1" time="2.396" failures="0">
+    <testcase name="tags should display popular tags" time="2.354" classname="should display popular tags"/>
+  </testsuite>
+  <testsuite name="login" timestamp="2023-05-22T17:09:24" tests="2" time="4.142" failures="0">
+    <testcase name="login should log in" time="2.536" classname="should log in"/>
+    <testcase name="login should log out" time="1.564" classname="should log out"/>
+  </testsuite>
+</testsuites>

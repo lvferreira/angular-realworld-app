@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="14.438" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-05-22T17:09:05" tests="0" file="cypress\e2e\feed.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="feed" timestamp="2023-05-22T17:09:05" tests="2" time="14.413" failures="0">
+    <testcase name="feed should validate global feed likes count" time="2.442" classname="should validate global feed likes count">
+    </testcase>
+    <testcase name="feed should delete new article from global feed" time="4.666" classname="should delete new article from global feed">
+    </testcase>
+  </testsuite>
+</testsuites>
